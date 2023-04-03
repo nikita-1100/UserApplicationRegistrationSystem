@@ -15,17 +15,17 @@ VALUES (1, 'USER'),
        (5, 'OPERATOR');
 
 INSERT INTO request(id, created, message, status, author_id)
-VALUES (1, '2023-04-01 03:39:24.257', 'Исправить NullPointerException', 'RECEIVED', 1),
-       (2, '2023-04-01 04:39:24.257', 'Уточнить у заказчика подробности по ТЗ', 'SENT', 1),
-       (3, '2023-04-01 05:39:24.257', 'Написать автоматизированные тесты', 'DRAFT', 1),
-       (4, '2023-04-01 06:39:24.257', 'Провести CodeReview', 'DRAFT', 1),
-       (5, '2023-04-01 07:39:24.257', 'Проверить корректность работы на старых версиях', 'DRAFT', 1),
-       (6, '2023-04-01 08:39:24.257', 'Выполнить рефакторинг', 'DRAFT', 1),
-       (7, '2023-04-01 09:39:24.257', 'Добавить фичу', 'DRAFT', 4),
-       (8, '2023-04-01 10:39:24.257', 'Вынести константы в Properties', 'SENT', 4),
-       (9, '2023-04-01 11:39:24.257', 'Обновить библиотеки в проекте', 'SENT', 4),
-       (10, '2023-04-01 12:39:24.257', 'Проработать нейминг', 'SENT', 4),
-       (11, '2023-04-01 13:39:24.257', 'Убрать Deprecated метод', 'REJECTED', 4),
-       (12, '2023-04-01 14:39:24.257', 'Сделать бекап базы данных', 'SENT', 4),
-       (13, '2023-04-01 15:39:24.257', 'Проработать возможность использования open source', 'DRAFT', 4);
+VALUES (1, '2023-04-01 03:39:24.257', ' Fix NullPointerException', 'RECEIVED', 1),
+       (2, '2023-04-01 04:39:24.257', ' To clarify with the customer the details of the specification', 'SENT', 1),
+       (3, '2023-04-01 05:39:24.257', ' Write automated tests', 'DRAFT', 1),
+       (4, '2023-04-01 06:39:24.257', ' Hold CodeReview', 'DRAFT', 1),
+       (5, '2023-04-01 07:39:24.257', 'Check the correctness of work on older versions', 'DRAFT', 1),
+       (6, '2023-04-01 08:39:24.257', ' Perform refactoring', 'DRAFT', 1),
+       (7, '2023-04-01 09:39:24.257', ' Add a feature', 'DRAFT', 4),
+       (8, '2023-04-01 10:39:24.257', ' Put constants in Properties', 'SENT', 4),
+       (9, '2023-04-01 11:39:24.257', ' Update libraries in the project', 'SENT', 4),
+       (10, '2023-04-01 12:39:24.257', ' Work out naming', 'SENT', 4),
+       (11, '2023-04-01 13:39:24.257', ' Remove Deprecated method', 'REJECTED', 4),
+       (12, '2023-04-01 14:39:24.257', ' Make a backup of the database', 'SENT', 4),
+       (13, '2023-04-01 15:39:24.257', ' To work out the possibility of using open source', 'DRAFT', 4);
 
