@@ -17,9 +17,20 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @RequiredArgsConstructor
 public class SecurityConfig {
-    private static final String[] OPERATOR_ENDPOINT = {"/operator/**","/operator/test"};
+    private static final String[] OPERATOR_ENDPOINT = {"/operator/**", "/operator/test"};
     private static final String[] USER_ENDPOINT = {"/user/**"};
     private static final String[] ADMIN_ENDPOINT = {"/admin/**"};
+    private static final String[] AUTH_WHITELIST = {
+            "/v2/api-docs",
+            "/swagger-resources",
+            "/swagger-resources/**",
+            "/configuration/ui",
+            "/configuration/security",
+            "/swagger-ui.html",
+            "/webjars/**",
+            "/v3/api-docs/**",
+            "/swagger-ui/**"
+    };
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -36,12 +47,12 @@ public class SecurityConfig {
         };
     }
 
-
     @Bean
     protected SecurityFilterChain configure(HttpSecurity http) throws Exception {
         http
                 .csrf().disable()
                 .authorizeHttpRequests((authz) -> authz
+                        .requestMatchers(AUTH_WHITELIST).permitAll()
                         .requestMatchers(ADMIN_ENDPOINT).hasAuthority("ADMIN")
                         .requestMatchers(OPERATOR_ENDPOINT).hasAuthority("OPERATOR")
                         .requestMatchers(USER_ENDPOINT).hasAuthority("USER")

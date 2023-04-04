@@ -3,7 +3,6 @@ package com.example.vitasofttesttask.config;
 //http://localhost:8080/swagger-ui.html
 //http://localhost:8080/v3/api-docs
 
-
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import io.swagger.v3.oas.annotations.info.Contact;

@@ -22,10 +22,6 @@ public class Request {
     @JoinColumn(name = "author_id")
     private AppUser author;
 
-//    @OneToOne
-//    @JoinColumn(name = "operator_id")
-//    private AppUser operator;
-
     private Date created;
 
     @Enumerated(EnumType.STRING)

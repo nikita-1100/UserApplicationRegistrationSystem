@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 public class RequestDto {
     private String message;
 
-    public static RequestDto fromRequest(Request request){
+    public static RequestDto fromRequest(Request request) {
         return new RequestDto(request.getMessage());
     }
 
