@@ -36,9 +36,9 @@ public class SecurityConfig {
         };
     }
 
+
     @Bean
     protected SecurityFilterChain configure(HttpSecurity http) throws Exception {
-
         http
                 .csrf().disable()
                 .authorizeHttpRequests((authz) -> authz
@@ -49,8 +49,6 @@ public class SecurityConfig {
                 )
                 .httpBasic();
         return http.build();
-
-
     }
 
 }
